@@ -1,0 +1,56 @@
+@use "style.module.scss" as f;
+
+@mixin article__style ($color, $border-color, $font-size) {
+    color: $color;
+    border-color: $border-color;
+    font-size: $font-size;
+  }
+
+  %text {
+    color: green;
+    border-color: none;
+    font-size: 24px;
+  }
+  
+  .exercise {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border: 2px solid red;
+
+      & > h1 {
+        @extend %text;
+        text-decoration: underline 1px blue;
+        text-underline-offset: 7px;
+      }
+
+      & > h2 {
+        @extend %text;
+        width: 280px;
+        height: 50px;
+        border: 1px solid red;
+      }
+    }
+    
+    .exercise section {
+      display: flex;
+      padding: 10px;
+    }
+    
+    .sec__1 > article {
+      border: 1px solid green;
+    }
+    
+    article:nth-child(even) {
+      color: red;
+    }
+    
+    article:nth-child(odd) {
+      color: blue;
+    }
+  
+    .sec__2 article {
+      border: 1px solid;
+      @include article__style(green, blue, 24px)
+    }
