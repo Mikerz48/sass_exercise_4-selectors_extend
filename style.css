@@ -16,6 +16,9 @@
   text-underline-offset: 7px;
 }
 .exercise > h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 280px;
   height: 50px;
   border: 1px solid red;
@@ -39,10 +42,15 @@ article:nth-child(odd) {
 }
 
 .sec__2 article {
+  width: 100%;
   border: 1px solid;
   color: green;
   border-color: blue;
   font-size: 24px;
+}
+
+.sec__2 {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
